@@ -10,23 +10,21 @@ Majority of farmers in a particular area grow the same type of crops, leading to
 - **Supply increases** while demand remains constant
 - **Market buyers** dictate prices, often below farmer expectations
 - **Reduced profitability** for farmers
+- **No Marketplace to sell** for farmers
+- **No Buyer platform** for FPOs
 
 ### 💡 Solution
 
 Our platform provides:
 - **Intelligent Crop Recommendations** based on location, climate, and soil conditions
 - **Comparative Analysis** showing profit potential across different crops
-- **Weather Advisory** for informed planting decisions
-- **Multi-lingual Support** (English, Hindi, Marathi, Punjabi, Tamil) for wider accessibility
+- **Unified Market Place** for buyer and seller
+- **Extensively built for farmer**
+- 
 
 ---
 
 ## ✨ Features
-
-### 🌐 Multi-Language Support
-- **5 Languages**: English, Hindi, Marathi, Punjabi, Tamil
-- Real-time language switching
-- Culturally appropriate translations
 
 ### 🌱 Crop Recommendation System
 - AI-powered suggestions based on:
@@ -45,16 +43,13 @@ Our platform provides:
   - Detailed tabular analysis
 - Profit-per-day calculations
 
-### 🌤️ Weather Advisory
-- Real-time weather updates
-- Weather warnings and alerts
-- 7-day forecast integration
-- District-wise weather data
+### 🌤️ Market Plaace
+- Real-time market updates
+- Unified Farmer Platform 
+- Harvest Date and Price updation
+- Quality Check
 
-### 🧪 Soil & Moisture Analysis
-- Soil moisture monitoring
-- Drought assessment
-- Optimal planting conditions
+
 
 ### 📱 Responsive Design
 - Mobile-first approach
@@ -250,15 +245,6 @@ Fully responsive design tested on:
    - Select 2-5 crops to compare
    - View visual charts and detailed tables
 
-4. **Weather Advisory**
-   - Check current weather warnings
-   - View 7-day forecast
-   - Plan sowing based on conditions
-
-### Language Switching
-- Click the language selector (🌐 icon)
-- Choose from 5 available languages
-- Preference is automatically saved
 
 ---
 
