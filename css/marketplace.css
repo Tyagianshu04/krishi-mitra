@@ -1,0 +1,1367 @@
+/* ============================================
+   Krishi Mitra - Agricultural Marketplace
+   Professional Green & White Theme
+   Farm-to-Market Trading Platform
+   ============================================ */
+
+/* ============================================
+   Page Layout & Base Styles
+   ============================================ */
+
+.marketplace-page {
+    background: linear-gradient(180deg, #0d2106 0%, #132b0a 50%, #1a3a0e 100%);
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+
+.market-header {
+    background: linear-gradient(135deg, #0d2106 0%, #1a3a0e 100%);
+    border-bottom: 1px solid rgba(74, 124, 44, 0.3);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-icon {
+    filter: drop-shadow(0 2px 8px rgba(74, 124, 44, 0.5));
+}
+
+.brand-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.brand-text span {
+    font-size: 0.75rem;
+    color: #8bc34a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background: rgba(74, 124, 44, 0.3);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification-btn {
+    position: relative;
+    background: rgba(74, 124, 44, 0.2);
+    border: 1px solid rgba(74, 124, 44, 0.3);
+    color: #8bc34a;
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notification-btn:hover {
+    background: rgba(74, 124, 44, 0.4);
+    color: #ffffff;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #4a7c2c;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.4) 0%, rgba(26, 58, 14, 0.6) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(74, 124, 44, 0.2);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8bc34a;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+
+.marketplace-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ============================================
+   Section Styles (Common)
+   ============================================ */
+
+.market-section {
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(74, 124, 44, 0.2);
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(74, 124, 44, 0.2);
+}
+
+.section-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.section-title h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.section-title p {
+    font-size: 0.95rem;
+    color: #8bc34a;
+    margin: 0;
+}
+
+/* ============================================
+   FARMER SECTION - Produce Listing Portal
+   ============================================ */
+
+.farmer-section {
+    background: linear-gradient(180deg, rgba(45, 80, 22, 0.15) 0%, rgba(26, 58, 14, 0.1) 100%);
+}
+
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.primary-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
+}
+
+.primary-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(74, 124, 44, 0.3);
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.filter-select option {
+    background: #1a3a0e;
+    color: #ffffff;
+}
+
+/* Listings Grid */
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Listing Card */
+.listing-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(74, 124, 44, 0.25);
+    border-radius: 14px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.listing-card:hover {
+    border-color: #4a7c2c;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.listing-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.listing-badge.premium {
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+}
+
+.listing-badge.organic {
+    background: linear-gradient(135deg, #2d6a1e 0%, #4a9c2c 100%);
+    color: #ffffff;
+}
+
+.listing-badge.fresh {
+    background: linear-gradient(135deg, #3d8c28 0%, #5cb83c 100%);
+    color: #ffffff;
+}
+
+.listing-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.crop-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(74, 124, 44, 0.3) 0%, rgba(107, 168, 62, 0.3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crop-icon.wheat-icon::after { content: "🌾"; font-size: 1.5rem; }
+.crop-icon.rice-icon::after { content: "🍚"; font-size: 1.5rem; }
+.crop-icon.pulses-icon::after { content: "🫘"; font-size: 1.5rem; }
+.crop-icon.vegetable-icon::after { content: "🍅"; font-size: 1.5rem; }
+.crop-icon.oilseed-icon::after { content: "🥜"; font-size: 1.5rem; }
+.crop-icon.spice-icon::after { content: "🧡"; font-size: 1.5rem; }
+
+.crop-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.35rem 0;
+}
+
+.variety-tag {
+    font-size: 0.8rem;
+    color: #8bc34a;
+}
+
+.listing-details {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row .label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.detail-row .value {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.pricing-section {
+    background: linear-gradient(135deg, rgba(74, 124, 44, 0.2) 0%, rgba(107, 168, 62, 0.15) 100%);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.farmer-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.price-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #8bc34a;
+}
+
+.msp-comparison {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.above-msp {
+    color: #8bc34a;
+    font-weight: 600;
+}
+
+.below-msp {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.farmer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.farmer-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.farmer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.farmer-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.farmer-rating {
+    font-size: 0.8rem;
+    color: #8bc34a;
+}
+
+.contact-btn {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #4a7c2c;
+    color: #8bc34a;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #4a7c2c;
+    color: #ffffff;
+}
+
+/* ============================================
+   RETAILER SECTION - Procurement Hub
+   ============================================ */
+
+.retailer-section {
+    background: linear-gradient(180deg, rgba(26, 58, 14, 0.2) 0%, rgba(13, 33, 6, 0.15) 100%);
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.search-input-wrapper svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(74, 124, 44, 0.3);
+    color: #ffffff;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4a7c2c;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+}
+
+/* Category Filters */
+.category-filters {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(74, 124, 44, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-chip:hover,
+.category-chip.active {
+    background: #4a7c2c;
+    border-color: #4a7c2c;
+    color: #ffffff;
+}
+
+/* Produce Table */
+.produce-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(74, 124, 44, 0.2);
+}
+
+.produce-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.produce-table thead {
+    background: rgba(74, 124, 44, 0.2);
+}
+
+.produce-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8bc34a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(74, 124, 44, 0.3);
+}
+
+.produce-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease;
+}
+
+.produce-table tbody tr:hover {
+    background: rgba(74, 124, 44, 0.1);
+}
+
+.produce-table td {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.commodity-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.commodity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commodity-icon.cereals { background: rgba(255, 193, 7, 0.2); }
+.commodity-icon.cereals::after { content: "🌾"; font-size: 1rem; }
+.commodity-icon.pulses { background: rgba(139, 69, 19, 0.2); }
+.commodity-icon.pulses::after { content: "🫘"; font-size: 1rem; }
+.commodity-icon.vegetables { background: rgba(76, 175, 80, 0.2); }
+.commodity-icon.vegetables::after { content: "🥬"; font-size: 1rem; }
+.commodity-icon.fruits { background: rgba(255, 87, 34, 0.2); }
+.commodity-icon.fruits::after { content: "🥭"; font-size: 1rem; }
+.commodity-icon.oilseeds { background: rgba(121, 85, 72, 0.2); }
+.commodity-icon.oilseeds::after { content: "🥜"; font-size: 1rem; }
+.commodity-icon.spices { background: rgba(255, 152, 0, 0.2); }
+.commodity-icon.spices::after { content: "🌶️"; font-size: 1rem; }
+
+.price-cell {
+    color: #8bc34a;
+    font-weight: 600;
+}
+
+.rating {
+    color: #8bc34a;
+    font-weight: 500;
+}
+
+.buy-btn {
+    background: transparent;
+    border: 1px solid #4a7c2c;
+    color: #8bc34a;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.buy-btn:hover {
+    background: #4a7c2c;
+    color: #ffffff;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: rgba(74, 124, 44, 0.1);
+    border: 1px solid rgba(74, 124, 44, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #4a7c2c;
+    transform: translateY(-4px);
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #ffffff;
+}
+
+.benefit-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.benefit-card p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================
+   CORPORATE SECTION - Bulk Procurement
+   ============================================ */
+
+.corporate-section {
+    background: linear-gradient(180deg, rgba(13, 33, 6, 0.3) 0%, rgba(26, 58, 14, 0.2) 100%);
+}
+
+.corporate-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.corp-stat {
+    background: rgba(74, 124, 44, 0.15);
+    border: 1px solid rgba(74, 124, 44, 0.25);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.corp-stat-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #8bc34a;
+    margin-bottom: 0.25rem;
+}
+
+.corp-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tenders Section */
+.tenders-section {
+    margin-bottom: 3rem;
+}
+
+.tenders-section h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.tenders-subtitle {
+    font-size: 0.9rem;
+    color: #8bc34a;
+    margin: 0 0 1.5rem 0;
+}
+
+.tenders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.tender-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(74, 124, 44, 0.25);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tender-card:hover {
+    border-color: #4a7c2c;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tender-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.tender-info {
+    flex: 1;
+}
+
+.tender-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.25rem 0;
+}
+
+.tender-id {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tender-status {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tender-status.open {
+    background: rgba(74, 124, 44, 0.3);
+    color: #8bc34a;
+}
+
+.tender-status.urgent {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ffb74d;
+}
+
+.tender-details {
+    margin-bottom: 1.25rem;
+}
+
+.tender-commodity {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tender-commodity .label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.25rem;
+}
+
+.tender-commodity .value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8bc34a;
+}
+
+.tender-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec .label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.spec .value {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.tender-requirements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.req-tag {
+    background: rgba(74, 124, 44, 0.2);
+    color: #8bc34a;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.tender-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deadline {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.bid-btn {
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bid-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 124, 44, 0.4);
+}
+
+/* Contract Farming Section */
+.contract-farming {
+    margin-bottom: 3rem;
+}
+
+.contract-farming h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.section-desc {
+    font-size: 0.9rem;
+    color: #8bc34a;
+    margin: 0 0 1.5rem 0;
+}
+
+.contracts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.contract-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(74, 124, 44, 0.25);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contract-card:hover {
+    border-color: #4a7c2c;
+    transform: translateY(-4px);
+}
+
+.contract-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.crop-type {
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.contract-type {
+    font-size: 0.75rem;
+    color: #8bc34a;
+    font-weight: 500;
+}
+
+.contract-company {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.contract-details {
+    margin-bottom: 1.25rem;
+}
+
+.contract-details p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.4rem 0;
+}
+
+.contract-details strong {
+    color: #8bc34a;
+}
+
+.apply-btn {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #4a7c2c;
+    color: #8bc34a;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #4a7c2c;
+    color: #ffffff;
+}
+
+/* FPO CTA Section */
+.fpo-cta {
+    background: linear-gradient(135deg, rgba(74, 124, 44, 0.2) 0%, rgba(107, 168, 62, 0.15) 100%);
+    border: 1px solid rgba(74, 124, 44, 0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.fpo-content h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+}
+
+.fpo-content p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 1rem 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.fpo-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fpo-benefit {
+    color: #8bc34a;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.register-fpo-btn {
+    background: linear-gradient(135deg, #4a7c2c 0%, #6ba83e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
+}
+
+.register-fpo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+
+.market-footer {
+    background: #0a1a05;
+    border-top: 1px solid rgba(74, 124, 44, 0.2);
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8bc34a;
+}
+
+.footer-copy p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0.25rem 0;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .listings-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .market-header {
+        padding: 1rem;
+    }
+    
+    .header-container {
+        gap: 1rem;
+    }
+    
+    .brand-text h1 {
+        font-size: 1.25rem;
+    }
+    
+    .hero-section {
+        padding: 2.5rem 1rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .marketplace-main {
+        padding: 1rem;
+    }
+    
+    .market-section {
+        padding: 1.5rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .action-bar {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .listings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .category-filters {
+        justify-content: center;
+    }
+    
+    .tenders-grid,
+    .contracts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fpo-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .fpo-benefits {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 1.35rem;
+    }
+    
+    .listing-card {
+        padding: 1.25rem;
+    }
+    
+    .tender-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .corporate-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.listing-card,
+.tender-card,
+.contract-card,
+.benefit-card {
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.listing-card:nth-child(1) { animation-delay: 0.1s; }
+.listing-card:nth-child(2) { animation-delay: 0.2s; }
+.listing-card:nth-child(3) { animation-delay: 0.3s; }
+.listing-card:nth-child(4) { animation-delay: 0.4s; }
+.listing-card:nth-child(5) { animation-delay: 0.5s; }
+.listing-card:nth-child(6) { animation-delay: 0.6s; }
+
+.tender-card:nth-child(1) { animation-delay: 0.1s; }
+.tender-card:nth-child(2) { animation-delay: 0.2s; }
+.tender-card:nth-child(3) { animation-delay: 0.3s; }
+.tender-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a7c2c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6ba83e;
+}

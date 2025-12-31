@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Backend (not needed for Vercel static hosting)
+backend/
+
+# Test files (not needed for production)
+test_*.html
+debug_*.html
+SETUP.html
+
+# Logs
+*.log
+npm-debug.log*

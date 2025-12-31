@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krishi DSS - Smart Agriculture Advisory Platform for Crop Diversification">
+    <title>Krishi Mitra - Login | Agriculture Advisory Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button id="languageBtn" class="language-btn" aria-label="Select Language">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">English</span>
+        </button>
+        <div id="languageDropdown" class="language-dropdown hidden">
+            <button data-lang="en">English</button>
+            <button data-lang="hi">हिंदी</button>
+            <button data-lang="mr">मराठी</button>
+            <button data-lang="pa">ਪੰਜਾਬੀ</button>
+            <button data-lang="ta">தமிழ்</button>
+        </div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo and Header -->
+            <div class="auth-header">
+                <div class="logo-container">
+                    <svg class="logo-icon" width="60" height="60" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="#4a7c2c"/>
+                        <path d="M12 14V22" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 18C8 18 6 19 6 20C6 20.55 6.45 21 7 21H17C17.55 21 18 20.55 18 20C18 19 16 18 16 18" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="6" r="1" fill="#6ba83e"/>
+                        <circle cx="10" cy="8" r="0.5" fill="#6ba83e"/>
+                        <circle cx="14" cy="8" r="0.5" fill="#6ba83e"/>
+                    </svg>
+                    <h1 class="logo-text">
+                        <span class="logo-main" data-i18n="app_name">Krishi Mitra</span>
+                        <span class="logo-sub" data-i18n="app_tagline">Smart Agriculture Advisory</span>
+                    </h1>
+                </div>
+                <p class="auth-description" data-i18n="login_subtitle">
+                    Empowering farmers with AI-driven crop recommendations and weather insights
+                </p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <div class="alert hidden" id="loginAlert"></div>
+
+                <div class="form-group">
+                    <label for="username" data-i18n="username_label">Username / Email / Mobile</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            required 
+                            autocomplete="username"
+                            data-i18n-placeholder="username_placeholder"
+                            placeholder="Enter your username, email or mobile number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" data-i18n="password_label">Password</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required 
+                            autocomplete="current-password"
+                            data-i18n-placeholder="password_placeholder"
+                            placeholder="Enter your password">
+                        <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span data-i18n="remember_me">Remember me</span>
+                    </label>
+                    <a href="#" class="link-text" data-i18n="forgot_password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="loginBtn">
+                    <span data-i18n="login_button">Login</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Registration Section -->
+                <div style="text-align: center; margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f4f9f0 0%, #e8f5e0 100%); border-radius: 12px; border: 2px solid #6ba83e;">
+                    <p style="font-size: 1rem; font-weight: 600; color: #2d5016; margin-bottom: 1rem;" data-i18n="new_user_text">New to Krishi Mitra?</p>
+                    <a href="register.html" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 1rem; font-weight: 600;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                        <span data-i18n="register_button">CREATE NEW ACCOUNT</span>
+                    </a>
+                    <p style="font-size: 0.85rem; color: #4a7c2c; margin-top: 0.75rem;" data-i18n="register_benefits">Join thousands of farmers making smarter decisions!</p>
+                </div>
+
+                <!-- Demo Mode -->
+                <div class="demo-mode" style="margin-top: 1rem;">
+                    <p class="demo-text" style="margin-bottom: 0.75rem;" data-i18n="or_try_demo">Or try without signing up:</p>
+                    <button type="button" class="btn btn-outline" id="demoBtn" data-i18n="demo_mode_button">
+                        Try Demo Mode
+                    </button>
+                </div>
+            </form>
+
+            <!-- Features List -->
+            <div class="features-list">
+                <div class="feature-item">
+                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span data-i18n="feature_profit">Maximize Profit with Smart Crop Selection</span>
+                </div>
+                <div class="feature-item">
+                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                    </svg>
+                    <span data-i18n="feature_weather">Real-time Weather Advisory</span>
+                </div>
+                <div class="feature-item">
+                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span data-i18n="feature_comparison">Crop Comparison & Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="auth-footer">
+            <p data-i18n="footer_text">© 2025 Krishi Mitra. Empowering farmers through technology.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="js/api_new.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

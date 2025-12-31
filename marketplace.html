@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krishi Mitra Marketplace - Connect Farmers, Retailers & Agri-Corporations">
+    <title>Agri Marketplace | Krishi Mitra</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/marketplace.css">
+</head>
+<body class="marketplace-page">
+    <!-- Header -->
+    <header class="market-header">
+        <div class="header-container">
+            <div class="brand">
+                <svg class="brand-icon" width="44" height="44" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="#4a7c2c"/>
+                    <path d="M12 14V22" stroke="#2d5016" stroke-width="2"/>
+                </svg>
+                <div class="brand-text">
+                    <h1>Krishi Mitra</h1>
+                    <span>Agricultural Marketplace</span>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="#farmer-section" class="nav-link">Sell Produce</a>
+                <a href="#retailer-section" class="nav-link">Buy Produce</a>
+                <a href="#corporate-section" class="nav-link">Corporate Procurement</a>
+            </nav>
+            <div class="header-actions">
+                <button class="notification-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-avatar">
+                    <span>RM</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Farm-to-Market Direct Trade Platform</h2>
+            <p>Empowering cultivators with fair pricing, connecting retailers to fresh harvest, and enabling corporate bulk procurement from verified growers.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">12,450+</span>
+                    <span class="stat-label">Registered Cultivators</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">₹85.2 Cr</span>
+                    <span class="stat-label">Trade Volume (FY 24-25)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3,200+</span>
+                    <span class="stat-label">Active Procurement Orders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="marketplace-main">
+        
+        <!-- ============================================
+             SECTION 1: FARMER SELLING PORTAL
+             ============================================ -->
+        <section class="market-section farmer-section" id="farmer-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v6m0 0l3-3m-3 3l-3-3"/>
+                        <rect x="3" y="8" width="18" height="12" rx="2"/>
+                        <path d="M8 12h8M8 16h5"/>
+                    </svg>
+                </div>
+                <div class="section-title">
+                    <h2>Kisan Produce Listing Portal</h2>
+                    <p>List your harvest directly • Set your own Mandi rates • Connect with verified buyers</p>
+                </div>
+            </div>
+
+            <!-- Farmer Action Bar -->
+            <div class="action-bar">
+                <button class="primary-action-btn" id="listProduceBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    List New Produce
+                </button>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="">All Crop Categories</option>
+                        <option value="cereals">Cereals & Millets</option>
+                        <option value="pulses">Pulses & Legumes</option>
+                        <option value="oilseeds">Oilseeds</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="spices">Spices & Condiments</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Harvest Season</option>
+                        <option value="kharif">Kharif (Monsoon)</option>
+                        <option value="rabi">Rabi (Winter)</option>
+                        <option value="zaid">Zaid (Summer)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Farmer Listings Grid -->
+            <div class="listings-grid">
+                <!-- Listing Card 1 -->
+                <div class="listing-card">
+                    <div class="listing-badge premium">Premium Quality</div>
+                    <div class="listing-header">
+                        <div class="crop-icon wheat-icon"></div>
+                        <div class="crop-info">
+                            <h4>Sharbati Wheat (HD-3226)</h4>
+                            <span class="variety-tag">Certified Seeds • Grade A</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">85 Quintals</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Moisture Content:</span>
+                            <span class="value">12.5%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Harvest Date:</span>
+                            <span class="value">March 2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Karnal, Haryana</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹2,450/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>MSP: ₹2,275/Qtl</span>
+                            <span class="above-msp">+7.7% Above MSP</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">RS</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">Rajendra Singh</span>
+                            <span class="farmer-rating">★ 4.8 (42 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+
+                <!-- Listing Card 2 -->
+                <div class="listing-card">
+                    <div class="listing-badge organic">Organic Certified</div>
+                    <div class="listing-header">
+                        <div class="crop-icon rice-icon"></div>
+                        <div class="crop-info">
+                            <h4>Basmati Paddy (Pusa-1121)</h4>
+                            <span class="variety-tag">NPOP Certified • Export Grade</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">120 Quintals</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Grain Length:</span>
+                            <span class="value">8.4mm (Extra Long)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Harvest Date:</span>
+                            <span class="value">November 2024</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Dehradun, Uttarakhand</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹4,850/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>MSP: ₹2,320/Qtl</span>
+                            <span class="above-msp">Premium Organic</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">MK</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">Mahesh Kumar</span>
+                            <span class="farmer-rating">★ 4.9 (67 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+
+                <!-- Listing Card 3 -->
+                <div class="listing-card">
+                    <div class="listing-header">
+                        <div class="crop-icon pulses-icon"></div>
+                        <div class="crop-info">
+                            <h4>Masoor Dal (Lens culinaris)</h4>
+                            <span class="variety-tag">Whole Red Lentils • FAQ</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">45 Quintals</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Purity Level:</span>
+                            <span class="value">98.5%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Harvest Date:</span>
+                            <span class="value">February 2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Indore, MP</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹6,200/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>MSP: ₹6,425/Qtl</span>
+                            <span class="below-msp">Negotiable</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">SP</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">Sunita Patel</span>
+                            <span class="farmer-rating">★ 4.6 (28 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+
+                <!-- Listing Card 4 -->
+                <div class="listing-card">
+                    <div class="listing-badge fresh">Fresh Harvest</div>
+                    <div class="listing-header">
+                        <div class="crop-icon vegetable-icon"></div>
+                        <div class="crop-info">
+                            <h4>Desi Tomatoes (Hybrid-7711)</h4>
+                            <span class="variety-tag">Farm Fresh • Polyhouse Grown</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">25 Quintals/Week</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Size Grade:</span>
+                            <span class="value">Large (80-100g)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Availability:</span>
+                            <span class="value">Continuous Supply</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Nashik, Maharashtra</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹2,800/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>Market Rate: ₹3,200/Qtl</span>
+                            <span class="below-msp">Direct Farm Price</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">AJ</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">Anil Jadhav</span>
+                            <span class="farmer-rating">★ 4.7 (53 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+
+                <!-- Listing Card 5 -->
+                <div class="listing-card">
+                    <div class="listing-header">
+                        <div class="crop-icon oilseed-icon"></div>
+                        <div class="crop-info">
+                            <h4>Groundnut (TG-37A)</h4>
+                            <span class="variety-tag">Bold Kernel • HPS Grade</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">60 Quintals</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Oil Content:</span>
+                            <span class="value">48-50%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Harvest Date:</span>
+                            <span class="value">October 2024</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Junagadh, Gujarat</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹5,950/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>MSP: ₹6,377/Qtl</span>
+                            <span class="below-msp">Quick Sale</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">BM</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">Bhavesh Mehta</span>
+                            <span class="farmer-rating">★ 4.5 (19 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+
+                <!-- Listing Card 6 -->
+                <div class="listing-card">
+                    <div class="listing-badge premium">A1 Quality</div>
+                    <div class="listing-header">
+                        <div class="crop-icon spice-icon"></div>
+                        <div class="crop-info">
+                            <h4>Turmeric (Curcuma longa)</h4>
+                            <span class="variety-tag">Erode Finger • High Curcumin</span>
+                        </div>
+                    </div>
+                    <div class="listing-details">
+                        <div class="detail-row">
+                            <span class="label">Available Quantity:</span>
+                            <span class="value">35 Quintals</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Curcumin Content:</span>
+                            <span class="value">5.2%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Harvest Date:</span>
+                            <span class="value">January 2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Collection Point:</span>
+                            <span class="value">Erode, Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <div class="pricing-section">
+                        <div class="farmer-price">
+                            <span class="price-label">Farmer's Asking Price</span>
+                            <span class="price-value">₹12,500/Qtl</span>
+                        </div>
+                        <div class="msp-comparison">
+                            <span>Market Rate: ₹14,000/Qtl</span>
+                            <span class="above-msp">Direct Sourcing</span>
+                        </div>
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-avatar">KR</div>
+                        <div class="farmer-details">
+                            <span class="farmer-name">K. Ramasamy</span>
+                            <span class="farmer-rating">★ 4.9 (78 transactions)</span>
+                        </div>
+                    </div>
+                    <button class="contact-btn">Contact Cultivator</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 2: RETAILER BUYING PORTAL
+             ============================================ -->
+        <section class="market-section retailer-section" id="retailer-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                <div class="section-title">
+                    <h2>Retailer Procurement Hub</h2>
+                    <p>Source directly from Kisans • Zero middlemen • Farm-gate prices • Quality assured produce</p>
+                </div>
+            </div>
+
+            <!-- Retailer Search Bar -->
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search by crop name, variety, location, or farmer..." class="search-input">
+                </div>
+                <button class="search-btn">Find Produce</button>
+            </div>
+
+            <!-- Quick Category Filters -->
+            <div class="category-filters">
+                <button class="category-chip active">All Categories</button>
+                <button class="category-chip">Cereals</button>
+                <button class="category-chip">Pulses</button>
+                <button class="category-chip">Vegetables</button>
+                <button class="category-chip">Fruits</button>
+                <button class="category-chip">Spices</button>
+                <button class="category-chip">Oilseeds</button>
+            </div>
+
+            <!-- Available Produce Table -->
+            <div class="produce-table-wrapper">
+                <table class="produce-table">
+                    <thead>
+                        <tr>
+                            <th>Commodity</th>
+                            <th>Variety & Grade</th>
+                            <th>Quantity (Qtl)</th>
+                            <th>Farm-Gate Price</th>
+                            <th>Location</th>
+                            <th>Grower Rating</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon cereals"></span>
+                                    <span>Wheat</span>
+                                </div>
+                            </td>
+                            <td>HD-3226, Grade-A</td>
+                            <td>85</td>
+                            <td class="price-cell">₹2,450/Qtl</td>
+                            <td>Karnal, HR</td>
+                            <td><span class="rating">★ 4.8</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon cereals"></span>
+                                    <span>Basmati Paddy</span>
+                                </div>
+                            </td>
+                            <td>Pusa-1121, Export</td>
+                            <td>120</td>
+                            <td class="price-cell">₹4,850/Qtl</td>
+                            <td>Dehradun, UK</td>
+                            <td><span class="rating">★ 4.9</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon pulses"></span>
+                                    <span>Masoor Dal</span>
+                                </div>
+                            </td>
+                            <td>Whole Red, FAQ</td>
+                            <td>45</td>
+                            <td class="price-cell">₹6,200/Qtl</td>
+                            <td>Indore, MP</td>
+                            <td><span class="rating">★ 4.6</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon vegetables"></span>
+                                    <span>Tomatoes</span>
+                                </div>
+                            </td>
+                            <td>Hybrid-7711, Large</td>
+                            <td>25/Week</td>
+                            <td class="price-cell">₹2,800/Qtl</td>
+                            <td>Nashik, MH</td>
+                            <td><span class="rating">★ 4.7</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon oilseeds"></span>
+                                    <span>Groundnut</span>
+                                </div>
+                            </td>
+                            <td>TG-37A, Bold HPS</td>
+                            <td>60</td>
+                            <td class="price-cell">₹5,950/Qtl</td>
+                            <td>Junagadh, GJ</td>
+                            <td><span class="rating">★ 4.5</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon spices"></span>
+                                    <span>Turmeric</span>
+                                </div>
+                            </td>
+                            <td>Erode Finger, 5.2%</td>
+                            <td>35</td>
+                            <td class="price-cell">₹12,500/Qtl</td>
+                            <td>Erode, TN</td>
+                            <td><span class="rating">★ 4.9</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon pulses"></span>
+                                    <span>Chana Dal</span>
+                                </div>
+                            </td>
+                            <td>Desi, Super Bold</td>
+                            <td>75</td>
+                            <td class="price-cell">₹5,650/Qtl</td>
+                            <td>Rajkot, GJ</td>
+                            <td><span class="rating">★ 4.4</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon vegetables"></span>
+                                    <span>Onion</span>
+                                </div>
+                            </td>
+                            <td>Nashik Red, Large</td>
+                            <td>150</td>
+                            <td class="price-cell">₹1,850/Qtl</td>
+                            <td>Nashik, MH</td>
+                            <td><span class="rating">★ 4.6</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon fruits"></span>
+                                    <span>Alphonso Mango</span>
+                                </div>
+                            </td>
+                            <td>Ratnagiri, Premium</td>
+                            <td>40</td>
+                            <td class="price-cell">₹8,500/Qtl</td>
+                            <td>Ratnagiri, MH</td>
+                            <td><span class="rating">★ 4.8</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="commodity-cell">
+                                    <span class="commodity-icon cereals"></span>
+                                    <span>Maize</span>
+                                </div>
+                            </td>
+                            <td>Yellow Dent, Feed</td>
+                            <td>200</td>
+                            <td class="price-cell">₹2,150/Qtl</td>
+                            <td>Davangere, KA</td>
+                            <td><span class="rating">★ 4.3</span></td>
+                            <td><button class="buy-btn">Place Order</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Retailer Benefits -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h4>Quality Assurance</h4>
+                    <p>All produce verified for grade, moisture & purity before listing</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Real-Time Availability</h4>
+                    <p>Live inventory updates from farm-level storage facilities</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h4>Secure Payments</h4>
+                    <p>Escrow-protected transactions with instant settlement to farmers</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h4>Full Traceability</h4>
+                    <p>Complete farm-to-fork chain visibility with geo-tagged produce</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 3: CORPORATE BULK PROCUREMENT
+             ============================================ -->
+        <section class="market-section corporate-section" id="corporate-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <div class="section-title">
+                    <h2>Corporate Procurement Portal</h2>
+                    <p>Direct-from-farm bulk sourcing • Contract farming partnerships • FPO aggregation • Supply chain integration</p>
+                </div>
+            </div>
+
+            <!-- Corporate Stats Bar -->
+            <div class="corporate-stats">
+                <div class="corp-stat">
+                    <span class="corp-stat-value">450+</span>
+                    <span class="corp-stat-label">Registered FPOs</span>
+                </div>
+                <div class="corp-stat">
+                    <span class="corp-stat-value">85,000+</span>
+                    <span class="corp-stat-label">Aggregated Farmers</span>
+                </div>
+                <div class="corp-stat">
+                    <span class="corp-stat-value">28 States</span>
+                    <span class="corp-stat-label">Pan-India Coverage</span>
+                </div>
+                <div class="corp-stat">
+                    <span class="corp-stat-value">₹250 Cr+</span>
+                    <span class="corp-stat-label">Annual Procurement</span>
+                </div>
+            </div>
+
+            <!-- Active Procurement Tenders -->
+            <div class="tenders-section">
+                <h3>Active Bulk Procurement Tenders</h3>
+                <p class="tenders-subtitle">Farmers & FPOs can directly bid on corporate requirements</p>
+                
+                <div class="tenders-grid">
+                    <!-- Tender Card 1 -->
+                    <div class="tender-card">
+                        <div class="tender-header">
+                            <div class="company-logo itc">ITC</div>
+                            <div class="tender-info">
+                                <h4>ITC Agri Business</h4>
+                                <span class="tender-id">Tender #AGR-2025-0892</span>
+                            </div>
+                            <span class="tender-status open">Open for Bids</span>
+                        </div>
+                        <div class="tender-details">
+                            <div class="tender-commodity">
+                                <span class="label">Commodity Required:</span>
+                                <span class="value">Wheat (Sharbati, FAQ Grade)</span>
+                            </div>
+                            <div class="tender-specs">
+                                <div class="spec">
+                                    <span class="label">Quantity:</span>
+                                    <span class="value">5,000 MT</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Window:</span>
+                                    <span class="value">Apr - May 2025</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Base Price:</span>
+                                    <span class="value">₹2,350/Qtl</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Points:</span>
+                                    <span class="value">Hapur, Khanna, Kota</span>
+                                </div>
+                            </div>
+                            <div class="tender-requirements">
+                                <span class="req-tag">Moisture &lt;14%</span>
+                                <span class="req-tag">Foreign Matter &lt;1%</span>
+                                <span class="req-tag">Broken &lt;2%</span>
+                            </div>
+                        </div>
+                        <div class="tender-footer">
+                            <span class="deadline">Bid Deadline: 15 Jan 2025</span>
+                            <button class="bid-btn">Submit Bid</button>
+                        </div>
+                    </div>
+
+                    <!-- Tender Card 2 -->
+                    <div class="tender-card">
+                        <div class="tender-header">
+                            <div class="company-logo adani">AG</div>
+                            <div class="tender-info">
+                                <h4>Adani Wilmar Ltd</h4>
+                                <span class="tender-id">Tender #AWL-2025-0456</span>
+                            </div>
+                            <span class="tender-status open">Open for Bids</span>
+                        </div>
+                        <div class="tender-details">
+                            <div class="tender-commodity">
+                                <span class="label">Commodity Required:</span>
+                                <span class="value">Soybean (Yellow, Grade-A)</span>
+                            </div>
+                            <div class="tender-specs">
+                                <div class="spec">
+                                    <span class="label">Quantity:</span>
+                                    <span class="value">10,000 MT</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Window:</span>
+                                    <span class="value">Feb - Mar 2025</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Base Price:</span>
+                                    <span class="value">₹4,600/Qtl</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Points:</span>
+                                    <span class="value">Indore, Nagpur</span>
+                                </div>
+                            </div>
+                            <div class="tender-requirements">
+                                <span class="req-tag">Oil Content &gt;18%</span>
+                                <span class="req-tag">Moisture &lt;12%</span>
+                                <span class="req-tag">Damaged &lt;3%</span>
+                            </div>
+                        </div>
+                        <div class="tender-footer">
+                            <span class="deadline">Bid Deadline: 20 Jan 2025</span>
+                            <button class="bid-btn">Submit Bid</button>
+                        </div>
+                    </div>
+
+                    <!-- Tender Card 3 -->
+                    <div class="tender-card">
+                        <div class="tender-header">
+                            <div class="company-logo reliance">RF</div>
+                            <div class="tender-info">
+                                <h4>Reliance Fresh</h4>
+                                <span class="tender-id">Tender #RF-2025-1023</span>
+                            </div>
+                            <span class="tender-status urgent">Urgent Requirement</span>
+                        </div>
+                        <div class="tender-details">
+                            <div class="tender-commodity">
+                                <span class="label">Commodity Required:</span>
+                                <span class="value">Fresh Vegetables (Assorted)</span>
+                            </div>
+                            <div class="tender-specs">
+                                <div class="spec">
+                                    <span class="label">Quantity:</span>
+                                    <span class="value">500 MT/Month</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Contract Duration:</span>
+                                    <span class="value">12 Months</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Payment Terms:</span>
+                                    <span class="value">Weekly Settlement</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Points:</span>
+                                    <span class="value">Pan-India DCs</span>
+                                </div>
+                            </div>
+                            <div class="tender-requirements">
+                                <span class="req-tag">Grade-A Only</span>
+                                <span class="req-tag">Cold Chain Ready</span>
+                                <span class="req-tag">GAP Certified</span>
+                            </div>
+                        </div>
+                        <div class="tender-footer">
+                            <span class="deadline">Bid Deadline: 10 Jan 2025</span>
+                            <button class="bid-btn">Submit Bid</button>
+                        </div>
+                    </div>
+
+                    <!-- Tender Card 4 -->
+                    <div class="tender-card">
+                        <div class="tender-header">
+                            <div class="company-logo tata">TC</div>
+                            <div class="tender-info">
+                                <h4>Tata Consumer Products</h4>
+                                <span class="tender-id">Tender #TCP-2025-0234</span>
+                            </div>
+                            <span class="tender-status open">Open for Bids</span>
+                        </div>
+                        <div class="tender-details">
+                            <div class="tender-commodity">
+                                <span class="label">Commodity Required:</span>
+                                <span class="value">Turmeric (Erode/Salem Finger)</span>
+                            </div>
+                            <div class="tender-specs">
+                                <div class="spec">
+                                    <span class="label">Quantity:</span>
+                                    <span class="value">2,000 MT</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Window:</span>
+                                    <span class="value">Mar - Apr 2025</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Base Price:</span>
+                                    <span class="value">₹11,800/Qtl</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="label">Delivery Points:</span>
+                                    <span class="value">Erode, Sangli</span>
+                                </div>
+                            </div>
+                            <div class="tender-requirements">
+                                <span class="req-tag">Curcumin &gt;4%</span>
+                                <span class="req-tag">Polished</span>
+                                <span class="req-tag">FSSAI Compliant</span>
+                            </div>
+                        </div>
+                        <div class="tender-footer">
+                            <span class="deadline">Bid Deadline: 25 Jan 2025</span>
+                            <button class="bid-btn">Submit Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contract Farming Section -->
+            <div class="contract-farming">
+                <h3>Contract Farming Opportunities</h3>
+                <p class="section-desc">Partner with leading agri-businesses for assured buyback at predetermined prices</p>
+                
+                <div class="contracts-grid">
+                    <div class="contract-card">
+                        <div class="contract-header">
+                            <span class="crop-type">Potato</span>
+                            <span class="contract-type">Buyback Agreement</span>
+                        </div>
+                        <div class="contract-company">McCain Foods India</div>
+                        <div class="contract-details">
+                            <p><strong>Variety:</strong> Kennebec, Atlantic</p>
+                            <p><strong>Area Required:</strong> 500+ Acres</p>
+                            <p><strong>Buyback Price:</strong> ₹12/Kg (Fixed)</p>
+                            <p><strong>Region:</strong> Gujarat, Maharashtra</p>
+                        </div>
+                        <button class="apply-btn">Apply for Contract</button>
+                    </div>
+
+                    <div class="contract-card">
+                        <div class="contract-header">
+                            <span class="crop-type">Gherkins</span>
+                            <span class="contract-type">Export Contract</span>
+                        </div>
+                        <div class="contract-company">Global Green Company</div>
+                        <div class="contract-details">
+                            <p><strong>Variety:</strong> Ajax, Excelsior</p>
+                            <p><strong>Area Required:</strong> 200+ Acres</p>
+                            <p><strong>Buyback Price:</strong> ₹18/Kg (Grade-wise)</p>
+                            <p><strong>Region:</strong> Karnataka, Tamil Nadu</p>
+                        </div>
+                        <button class="apply-btn">Apply for Contract</button>
+                    </div>
+
+                    <div class="contract-card">
+                        <div class="contract-header">
+                            <span class="crop-type">Basmati Rice</span>
+                            <span class="contract-type">Premium Buyback</span>
+                        </div>
+                        <div class="contract-company">KRBL Ltd (India Gate)</div>
+                        <div class="contract-details">
+                            <p><strong>Variety:</strong> 1121, 1509</p>
+                            <p><strong>Area Required:</strong> 1000+ Acres</p>
+                            <p><strong>Buyback Price:</strong> MSP + 15%</p>
+                            <p><strong>Region:</strong> Punjab, Haryana, UP</p>
+                        </div>
+                        <button class="apply-btn">Apply for Contract</button>
+                    </div>
+
+                    <div class="contract-card">
+                        <div class="contract-header">
+                            <span class="crop-type">Organic Pulses</span>
+                            <span class="contract-type">Organic Premium</span>
+                        </div>
+                        <div class="contract-company">Organic India Pvt Ltd</div>
+                        <div class="contract-details">
+                            <p><strong>Variety:</strong> Moong, Urad, Chana</p>
+                            <p><strong>Area Required:</strong> 300+ Acres</p>
+                            <p><strong>Buyback Price:</strong> MSP + 25%</p>
+                            <p><strong>Region:</strong> MP, Rajasthan</p>
+                        </div>
+                        <button class="apply-btn">Apply for Contract</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FPO Registration CTA -->
+            <div class="fpo-cta">
+                <div class="fpo-content">
+                    <h3>Are You an FPO or Farmer Producer Company?</h3>
+                    <p>Register your organization to access exclusive bulk procurement opportunities, government schemes, and direct corporate tie-ups. Get premium prices for aggregated produce.</p>
+                    <div class="fpo-benefits">
+                        <span class="fpo-benefit">✓ Priority Tender Access</span>
+                        <span class="fpo-benefit">✓ Working Capital Support</span>
+                        <span class="fpo-benefit">✓ Free Quality Testing</span>
+                        <span class="fpo-benefit">✓ Logistics Assistance</span>
+                    </div>
+                </div>
+                <button class="register-fpo-btn">Register Your FPO</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="market-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="#4a7c2c"/>
+                    <path d="M12 14V22" stroke="#2d5016" stroke-width="2"/>
+                </svg>
+                <span>Krishi Mitra</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2025 Krishi Mitra. Empowering Indian Agriculture.</p>
+                <p>A Government of India Initiative under Digital India Programme</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

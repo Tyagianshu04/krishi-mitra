@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Krishi DSS - Smart Agriculture Advisory Platform">
+    <title>Register | Krishi Mitra</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button id="languageBtn" class="language-btn" aria-label="Select Language">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">English</span>
+        </button>
+        <div id="languageDropdown" class="language-dropdown hidden">
+            <button data-lang="en">English</button>
+            <button data-lang="hi">हिंदी</button>
+            <button data-lang="mr">मराठी</button>
+            <button data-lang="pa">ਪੰਜਾਬੀ</button>
+            <button data-lang="ta">தமிழ்</button>
+        </div>
+    </div>
+
+    <!-- Registration Container -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo and Header -->
+            <div class="auth-header">
+                <div class="logo-container">
+                    <svg class="logo-icon" width="60" height="60" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C12 2 8 6 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 6 12 2 12 2Z" fill="#4a7c2c"/>
+                        <path d="M12 14V22" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 18C8 18 6 19 6 20C6 20.55 6.45 21 7 21H17C17.55 21 18 20.55 18 20C18 19 16 18 16 18" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="6" r="1" fill="#6ba83e"/>
+                        <circle cx="10" cy="8" r="0.5" fill="#6ba83e"/>
+                        <circle cx="14" cy="8" r="0.5" fill="#6ba83e"/>
+                    </svg>
+                    <h1 class="logo-text">
+                        <span class="logo-main" data-i18n="app_name">Krishi Mitra</span>
+                        <span class="logo-sub" data-i18n="register_tagline">Create Your Account</span>
+                    </h1>
+                </div>
+                <p class="auth-description" data-i18n="register_subtitle">
+                    Join thousands of farmers making smarter agricultural decisions
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registerForm" class="auth-form">
+                <div class="alert hidden" id="registerAlert"></div>
+
+                <div class="form-group">
+                    <label for="fullName" data-i18n="fullname_label">Full Name</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            required 
+                            data-i18n-placeholder="fullname_placeholder"
+                            placeholder="Enter your full name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="email_label">Email Address</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            data-i18n-placeholder="email_placeholder"
+                            placeholder="Enter your email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile" data-i18n="mobile_label">Mobile Number</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                        <input 
+                            type="tel" 
+                            id="mobile" 
+                            name="mobile" 
+                            required 
+                            pattern="[0-9]{10}"
+                            data-i18n-placeholder="mobile_placeholder"
+                            placeholder="Enter 10-digit mobile number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword" data-i18n="password_label">Password</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input 
+                            type="password" 
+                            id="regPassword" 
+                            name="password" 
+                            required 
+                            minlength="6"
+                            data-i18n-placeholder="password_placeholder"
+                            placeholder="At least 6 characters">
+                        <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" data-i18n="confirm_password_label">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            required 
+                            data-i18n-placeholder="confirm_password_placeholder"
+                            placeholder="Re-enter your password">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="termsAccept" name="termsAccept" required>
+                        <span data-i18n="terms_accept">I agree to the Terms and Conditions</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="registerBtn">
+                    <span data-i18n="register_button">Create Account</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                    </svg>
+                </button>
+
+                <!-- Login Link -->
+                <div class="demo-mode">
+                    <p class="demo-text" data-i18n="have_account">Already have an account?</p>
+                    <a href="index.html" class="btn btn-outline" data-i18n="login_link">
+                        Login Here
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="auth-footer">
+            <p data-i18n="footer_text">© 2025 Krishi Mitra. Empowering farmers through technology.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
