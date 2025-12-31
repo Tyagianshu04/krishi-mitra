@@ -23,8 +23,9 @@ Thumbs.db
 dist/
 build/
 
-# Backend (not needed for Vercel static hosting)
-backend/
+# Backend cache files (backend is now included for Vercel serverless)
+backend/__pycache__/
+backend/.env
 
 # Test files (not needed for production)
 test_*.html

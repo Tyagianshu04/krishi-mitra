@@ -3,10 +3,22 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.9"
+    }
+  },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard.html" },
     { "source": "/register", "destination": "/register.html" },
-    { "source": "/login", "destination": "/index.html" }
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/api/location/states", "destination": "/api/states.py" },
+    { "source": "/api/location/districts", "destination": "/api/districts.py" },
+    { "source": "/api/location/districts/:state_code", "destination": "/api/districts.py?state_code=$state_code" },
+    { "source": "/api/crops/recommendations", "destination": "/api/crops.py" },
+    { "source": "/api/weather/:state_code/:district_code", "destination": "/api/weather.py?state_code=$state_code&district_code=$district_code" },
+    { "source": "/api/auth/:path*", "destination": "/api/auth.py" },
+    { "source": "/api/health", "destination": "/api/health.py" }
   ],
   "headers": [
     {

@@ -1,0 +1,2 @@
+# Vercel Python Runtime Requirements
+# No external dependencies needed - using Python standard library only

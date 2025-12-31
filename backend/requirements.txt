@@ -1,0 +1,26 @@
+# Krishi Mitra Backend - Requirements
+# Python 3.8+
+
+# FastAPI Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# MongoDB Driver
+motor==3.5.1
+pymongo==4.8.0
+
+# Data Validation
+pydantic==2.9.0
+pydantic[email]==2.9.0
+
+# Authentication
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.12
+pyjwt==2.9.0
+cryptography==43.0.0
+
+# CORS
+python-dotenv==1.0.1
+
+# Date/Time
+python-dateutil==2.9.0
