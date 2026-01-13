@@ -74,7 +74,7 @@
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -96,7 +96,7 @@
     padding: 0.6rem;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .notification-btn:hover {
@@ -271,7 +271,7 @@
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
 }
 
@@ -315,7 +315,7 @@
     border-radius: 14px;
     padding: 1.5rem;
     position: relative;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .listing-card:hover {
@@ -506,7 +506,7 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -549,7 +549,7 @@
     padding: 1rem 1rem 1rem 3rem;
     font-size: 1rem;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .search-input::placeholder {
@@ -571,7 +571,7 @@
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     white-space: nowrap;
 }
 
@@ -596,7 +596,7 @@
     font-size: 0.875rem;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .category-chip:hover,
@@ -697,7 +697,7 @@
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     white-space: nowrap;
 }
 
@@ -719,7 +719,7 @@
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .benefit-card:hover {
@@ -818,7 +818,7 @@
     border: 1px solid rgba(74, 124, 44, 0.25);
     border-radius: 14px;
     padding: 1.5rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tender-card:hover {
@@ -965,7 +965,7 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bid-btn:hover {
@@ -1002,7 +1002,7 @@
     border: 1px solid rgba(74, 124, 44, 0.25);
     border-radius: 12px;
     padding: 1.5rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .contract-card:hover {
@@ -1063,7 +1063,7 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .apply-btn:hover {
@@ -1120,7 +1120,7 @@
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     white-space: nowrap;
     box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
 }
