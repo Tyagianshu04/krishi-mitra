@@ -24,9 +24,20 @@ function initializeMarketplace() {
 function setupQuickActionCards() {
     const actionCards = document.querySelectorAll('.quick-action-card');
     actionCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
             const action = this.getAttribute('data-action');
-            navigateToSection(action);
+            if (action) {
+                navigateToSection(action);
+            }
+        });
+        // Also handle touch events for mobile
+        card.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            const action = this.getAttribute('data-action');
+            if (action) {
+                navigateToSection(action);
+            }
         });
     });
 }

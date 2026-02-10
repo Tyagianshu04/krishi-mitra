@@ -1897,6 +1897,7 @@
 .action-content .btn-sm {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
+    pointer-events: none;
 }
 
 /* Responsive adjustments */

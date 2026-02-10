@@ -58,28 +58,23 @@ function setupNavigation() {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             const page = item.getAttribute('data-page');
-            navigateToSection(page);
+            if (typeof navigateToSection === 'function') {
+                navigateToSection(page);
+            } else {
+                // Fallback navigation
+                document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                const target = document.getElementById(page + '-section');
+                if (target) target.classList.add('active');
+                item.classList.add('active');
+            }
             
             // Close mobile menu
-            if (sidebar.classList.contains('active')) {
+            if (sidebar && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
             }
         });
     });
-}
-
-function navigateToSection(sectionId) {
-    // Update active nav item
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    document.querySelector(`[data-page="${sectionId}"]`)?.classList.add('active');
-
-    // Show corresponding section
-    document.querySelectorAll('.content-section').forEach(section => {
-        section.classList.remove('active');
-    });
-    document.getElementById(`${sectionId}-section`)?.classList.add('active');
 }
 
 // ============================================
