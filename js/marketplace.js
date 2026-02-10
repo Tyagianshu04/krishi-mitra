@@ -31,14 +31,7 @@ function setupQuickActionCards() {
                 navigateToSection(action);
             }
         });
-        // Also handle touch events for mobile
-        card.addEventListener('touchend', function(e) {
-            e.preventDefault();
-            const action = this.getAttribute('data-action');
-            if (action) {
-                navigateToSection(action);
-            }
-        });
+
     });
 }
 
