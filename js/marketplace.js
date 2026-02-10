@@ -10,12 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeMarketplace() {
     setupListProduceModal();
     setupContactCultivatorButtons();
-    setupPlaceOrderButtons();
     setupBidButtons();
     setupContractButtons();
     setupFPORegistration();
     setupCategoryFilters();
-    setupSearchFunctionality();
     setupQuickActionCards();
 }
 
@@ -40,21 +38,21 @@ function navigateToSection(action) {
     });
     
     // Update sidebar active state
-    document.querySelectorAll('.sidebar-menu a').forEach(link => {
+    document.querySelectorAll('.sidebar-nav .nav-item').forEach(link => {
         link.classList.remove('active');
     });
     
     // Navigate to the appropriate section
     let sectionId = '';
     switch(action) {
-        case 'crop-comparison':
-            sectionId = 'crop-comparison-section';
+        case 'crop-recommendation':
+            sectionId = 'crop-recommendation-section';
+            break;
+        case 'disease-detection':
+            sectionId = 'disease-detection-section';
             break;
         case 'sell-produce':
             sectionId = 'sell-produce-section';
-            break;
-        case 'buy-produce':
-            sectionId = 'buy-produce-section';
             break;
         case 'corporate':
             sectionId = 'corporate-section';
@@ -68,7 +66,7 @@ function navigateToSection(action) {
         targetSection.classList.add('active');
         
         // Update sidebar link
-        const sidebarLink = document.querySelector(`.sidebar-menu a[href="#${sectionId}"]`);
+        const sidebarLink = document.querySelector(`.sidebar-nav .nav-item[data-page="${action}"]`);
         if (sidebarLink) {
             sidebarLink.classList.add('active');
         }
@@ -368,116 +366,6 @@ function openContactModal(farmerName, cropName) {
             closeModal('contact-modal');
             showSuccessNotification(`Your enquiry has been sent to ${farmerName}. They will contact you within 24 hours.`);
         }, 1000);
-    });
-}
-
-// ============================================
-// Place Order (Retailer)
-// ============================================
-
-function setupPlaceOrderButtons() {
-    document.querySelectorAll('.marketplace-table .btn-primary, .buy-btn').forEach(btn => {
-        if (btn.textContent.includes('Place Order')) {
-            btn.addEventListener('click', function() {
-                const row = this.closest('tr');
-                const commodity = row?.querySelector('.commodity-tag')?.textContent || 'Produce';
-                const price = row?.querySelector('.price-cell')?.textContent || '₹0';
-                const location = row?.cells[4]?.textContent || 'Location';
-                openPlaceOrderModal(commodity, price, location);
-            });
-        }
-    });
-}
-
-function openPlaceOrderModal(commodity, price, location) {
-    const modal = createModal('order-modal', `
-        <div class="modal-header">
-            <h3>Place Order</h3>
-            <button class="modal-close" onclick="closeModal('order-modal')">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="order-summary-card">
-                <h4>${commodity.replace(/[🌾🍚🫘🍅🥜🌶️🧅🥭🌽]/g, '').trim()}</h4>
-                <p class="order-price">${price}</p>
-                <p class="order-location">📍 ${location}</p>
-            </div>
-            <form id="orderForm" class="marketplace-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Order Quantity (Quintals) *</label>
-                        <input type="number" id="orderQty" required placeholder="Enter quantity">
-                    </div>
-                    <div class="form-group">
-                        <label>Delivery Preference</label>
-                        <select id="deliveryPref">
-                            <option value="pickup">Self Pickup</option>
-                            <option value="delivery">Doorstep Delivery</option>
-                            <option value="transport">Arrange Transport</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Delivery Address *</label>
-                    <textarea id="deliveryAddress" rows="2" required placeholder="Full delivery address with PIN code"></textarea>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Business Name</label>
-                        <input type="text" id="businessName" placeholder="Your business/shop name">
-                    </div>
-                    <div class="form-group">
-                        <label>GST Number</label>
-                        <input type="text" id="gstNumber" placeholder="GSTIN (if applicable)">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number *</label>
-                    <input type="tel" id="orderPhone" required placeholder="10-digit mobile number">
-                </div>
-                <div class="order-total-box" id="orderTotalBox">
-                    <p>Enter quantity to see estimated total</p>
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn btn-secondary" onclick="closeModal('order-modal')">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Confirm Order</button>
-                </div>
-            </form>
-        </div>
-    `);
-    
-    document.body.appendChild(modal);
-    
-    // Calculate total on quantity change
-    const qtyInput = document.getElementById('orderQty');
-    const priceNum = parseInt(price.replace(/[^\d]/g, '')) || 0;
-    
-    qtyInput.addEventListener('input', function() {
-        const qty = parseInt(this.value) || 0;
-        const total = qty * priceNum;
-        document.getElementById('orderTotalBox').innerHTML = `
-            <div class="total-row">
-                <span>Subtotal (${qty} Qtl × ${price})</span>
-                <span>₹${total.toLocaleString()}</span>
-            </div>
-            <div class="total-row">
-                <span>Platform Fee (1%)</span>
-                <span>₹${Math.round(total * 0.01).toLocaleString()}</span>
-            </div>
-            <div class="total-row grand-total">
-                <span>Total Amount</span>
-                <span>₹${Math.round(total * 1.01).toLocaleString()}</span>
-            </div>
-        `;
-    });
-    
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        showLoadingInModal();
-        
-        setTimeout(() => {
-            closeModal('order-modal');
-            showSuccessNotification('Order placed successfully! Order confirmation sent to your phone. The farmer will contact you to confirm delivery.');
-        }, 1500);
     });
 }
 
@@ -852,80 +740,21 @@ function setupCategoryFilters() {
     if (seasonFilter) {
         seasonFilter.addEventListener('change', filterProduceListings);
     }
-    
-    // Retailer section chips
-    document.querySelectorAll('.category-chips .chip').forEach(chip => {
-        chip.addEventListener('click', function() {
-            document.querySelectorAll('.category-chips .chip').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            filterRetailerTable(this.textContent.trim());
-        });
-    });
 }
 
 function filterProduceListings() {
     const category = document.getElementById('cropCategoryFilter')?.value || '';
     const season = document.getElementById('harvestSeasonFilter')?.value || '';
     
-    document.querySelectorAll('.produce-card').forEach(card => {
-        // For demo, show/hide based on simple logic
-        card.style.display = 'block';
+    document.querySelectorAll('.produce-listings-grid .produce-card').forEach(card => {
+        const cardCategory = card.getAttribute('data-category') || '';
+        const cardSeason = card.getAttribute('data-season') || '';
+        
+        const matchesCategory = !category || cardCategory === category;
+        const matchesSeason = !season || cardSeason === season;
+        
+        card.style.display = (matchesCategory && matchesSeason) ? '' : 'none';
     });
-}
-
-function filterRetailerTable(category) {
-    const rows = document.querySelectorAll('.marketplace-table tbody tr');
-    
-    rows.forEach(row => {
-        if (category === 'All Categories') {
-            row.style.display = '';
-        } else {
-            const commodityTag = row.querySelector('.commodity-tag')?.textContent.toLowerCase() || '';
-            if (commodityTag.includes(category.toLowerCase())) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        }
-    });
-}
-
-// ============================================
-// Search Functionality
-// ============================================
-
-function setupSearchFunctionality() {
-    const searchInput = document.querySelector('.marketplace-search-bar .search-input');
-    const searchBtn = document.querySelector('.marketplace-search-bar .btn-primary');
-    
-    if (searchInput) {
-        searchInput.addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                performSearch(this.value);
-            }
-        });
-    }
-    
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function() {
-            const query = document.querySelector('.marketplace-search-bar .search-input')?.value || '';
-            performSearch(query);
-        });
-    }
-}
-
-function performSearch(query) {
-    const rows = document.querySelectorAll('.marketplace-table tbody tr');
-    const lowerQuery = query.toLowerCase();
-    
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(lowerQuery) ? '' : 'none';
-    });
-    
-    if (query) {
-        showSuccessNotification(`Showing results for "${query}"`);
-    }
 }
 
 // ============================================

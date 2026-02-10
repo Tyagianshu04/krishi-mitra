@@ -101,13 +101,21 @@
                 </svg>
                 <span data-i18n="nav_overview">Overview</span>
             </a>
-            <a href="#crop-comparison" class="nav-item" data-page="crop-comparison">
+            <a href="#crop-recommendation" class="nav-item" data-page="crop-recommendation">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="20" x2="18" y2="10"></line>
                     <line x1="12" y1="20" x2="12" y2="4"></line>
                     <line x1="6" y1="20" x2="6" y2="14"></line>
                 </svg>
-                <span data-i18n="nav_crop_comparison">Crop Comparison</span>
+                <span data-i18n="nav_crop_recommendation">Crop Recommendation</span>
+            </a>
+            <a href="#disease-detection" class="nav-item" data-page="disease-detection">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22c4.97 0 9-2.69 9-6v-2c0-3.31-4.03-6-9-6s-9 2.69-9 6v2c0 3.31 4.03 6 9 6z"/>
+                    <path d="M12 2C9.24 2 7 4.24 7 7c0 1.38.56 2.63 1.46 3.54L12 14l3.54-3.46A4.98 4.98 0 0017 7c0-2.76-2.24-5-5-5z"/>
+                    <line x1="12" y1="18" x2="12" y2="22"/>
+                </svg>
+                <span data-i18n="nav_disease_detection">Disease Detection</span>
             </a>
             
             <!-- Marketplace Navigation -->
@@ -121,14 +129,6 @@
                     <path d="M8 12h8M8 16h5"/>
                 </svg>
                 <span data-i18n="nav_sell_produce">Sell Produce</span>
-            </a>
-            <a href="#buy-produce" class="nav-item" data-page="buy-produce">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                </svg>
-                <span data-i18n="nav_buy_produce">Buy from Farmers</span>
             </a>
             <a href="#corporate" class="nav-item" data-page="corporate">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -149,18 +149,66 @@
                 <p data-i18n="overview_subtitle">Quick insights into your farm's potential</p>
             </div>
 
-            <!-- Location Selector Card -->
-            <div class="produce-card location-selector-card">
-                <div class="produce-badge premium">🌾 Smart Farming</div>
-                <div class="produce-header">
-                    <div class="crop-image-box location-icon-box">
-                        <img loading="lazy" src="images/Wheat.jpg" alt="Farm Location">
+            <!-- All Features Grid -->
+            <div class="quick-actions-grid">
+                <div class="quick-action-card" data-action="crop-recommendation">
+                    <div class="action-image-box">
+                        <img loading="lazy" src="images/Wheat.jpg" alt="Crop Recommendations">
                     </div>
-                    <div class="crop-details">
-                        <h4 data-i18n="select_location">Select Your Location</h4>
-                        <span class="variety-tag">Get personalized crop recommendations</span>
+                    <div class="action-content">
+                        <h4>🌾 Crop Recommendations</h4>
+                        <p>Get AI-powered crop suggestions and compare yield, profit & demand</p>
+                        <button class="btn btn-primary btn-sm">Get Recommendations →</button>
                     </div>
                 </div>
+
+                <div class="quick-action-card" data-action="disease-detection">
+                    <div class="action-image-box">
+                        <img loading="lazy" src="images/rice.jpg" alt="Disease Detection">
+                    </div>
+                    <div class="action-content">
+                        <h4>🔬 Crop Disease Detection</h4>
+                        <p>Upload a photo of your crop to detect diseases instantly</p>
+                        <button class="btn btn-primary btn-sm">Detect Disease →</button>
+                    </div>
+                </div>
+
+                <div class="quick-action-card" data-action="sell-produce">
+                    <div class="action-image-box">
+                        <img loading="lazy" src="images/Potato.jpg" alt="Sell Produce">
+                    </div>
+                    <div class="action-content">
+                        <h4>🛒 Sell Your Produce</h4>
+                        <p>List your harvest and connect with buyers directly</p>
+                        <button class="btn btn-primary btn-sm">List Produce →</button>
+                    </div>
+                </div>
+
+                <div class="quick-action-card" data-action="corporate">
+                    <div class="action-image-box">
+                        <img loading="lazy" src="images/Chana.jpg" alt="Corporate Sales">
+                    </div>
+                    <div class="action-content">
+                        <h4>🏢 Corporate Contracts</h4>
+                        <p>Explore bulk buying opportunities with corporates</p>
+                        <button class="btn btn-primary btn-sm">View Tenders →</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Crop Recommendation Section -->
+        <section class="content-section" id="crop-recommendation-section">
+            <div class="section-header">
+                <h2 data-i18n="recommendation_title">Crop Recommendation & Analysis</h2>
+                <p data-i18n="recommendation_subtitle">Get personalized crop recommendations and compare potential profits for your region</p>
+            </div>
+
+            <!-- Location Selector -->
+            <div class="card" style="margin-bottom: 24px; border: 2px solid #e8f5e9;">
+                <h3 style="color: #2d5016; margin-bottom: 4px;">🌾 Select Your Location</h3>
+                <p style="color: #757575; font-size: 0.88rem; margin-bottom: 16px;">Get AI-powered crop suggestions based on your location and season</p>
                 <div id="locationForm" class="location-form-new">
                     <div class="form-grid">
                         <div class="form-group-new">
@@ -223,118 +271,9 @@
                 </div>
             </div>
 
-            <!-- Stats Cards Grid -->
-            <div class="overview-stats-grid">
-                <div class="overview-stat-card">
-                    <div class="stat-image-box">
-                        <img loading="lazy" src="images/rice.jpg" alt="Crops">
-                    </div>
-                    <div class="stat-info">
-                        <span class="stat-label" data-i18n="stat_recommended">Recommended Crops</span>
-                        <span class="stat-value-large" id="statCrops">-</span>
-                    </div>
-                    <div class="stat-indicator positive">
-                        <span>Based on your location</span>
-                    </div>
-                </div>
-
-                <div class="overview-stat-card">
-                    <div class="stat-image-box weather-box">
-                        <img loading="lazy" src="images/Wheat.jpg" alt="Weather">
-                    </div>
-                    <div class="stat-info">
-                        <span class="stat-label" data-i18n="stat_weather">Weather Status</span>
-                        <span class="stat-value-large" id="statWeather">-</span>
-                    </div>
-                    <div class="stat-indicator">
-                        <span>Current conditions</span>
-                    </div>
-                </div>
-
-                <div class="overview-stat-card">
-                    <div class="stat-image-box profit-box">
-                        <img loading="lazy" src="images/Mango.jpg" alt="Profit">
-                    </div>
-                    <div class="stat-info">
-                        <span class="stat-label" data-i18n="stat_profit">Avg. Profit Increase</span>
-                        <span class="stat-value-large" id="statProfit">-</span>
-                    </div>
-                    <div class="stat-indicator positive">
-                        <span>Compared to traditional farming</span>
-                    </div>
-                </div>
-
-                <div class="overview-stat-card">
-                    <div class="stat-image-box duration-box">
-                        <img loading="lazy" src="images/Cotton.jpg" alt="Duration">
-                    </div>
-                    <div class="stat-info">
-                        <span class="stat-label" data-i18n="stat_duration">Avg. Crop Duration</span>
-                        <span class="stat-value-large" id="statDuration">-</span>
-                    </div>
-                    <div class="stat-indicator">
-                        <span>Seed to harvest</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Actions Grid -->
-            <div class="quick-actions-grid">
-                <div class="quick-action-card" data-action="crop-comparison">
-                    <div class="action-image-box">
-                        <img loading="lazy" src="images/Tomato.jpg" alt="Compare Crops">
-                    </div>
-                    <div class="action-content">
-                        <h4>Analyze & Compare Crops</h4>
-                        <p>Compare yield, profit, and market demand for different crops</p>
-                        <button class="btn btn-primary btn-sm">Start Analysis →</button>
-                    </div>
-                </div>
-
-                <div class="quick-action-card" data-action="sell-produce">
-                    <div class="action-image-box">
-                        <img loading="lazy" src="images/Potato.jpg" alt="Sell Produce">
-                    </div>
-                    <div class="action-content">
-                        <h4>Sell Your Produce</h4>
-                        <p>List your harvest and connect with buyers directly</p>
-                        <button class="btn btn-primary btn-sm">List Produce →</button>
-                    </div>
-                </div>
-
-                <div class="quick-action-card" data-action="buy-produce">
-                    <div class="action-image-box">
-                        <img loading="lazy" src="images/Onion.jpg" alt="Buy Produce">
-                    </div>
-                    <div class="action-content">
-                        <h4>Buy from Farmers</h4>
-                        <p>Browse fresh produce directly from cultivators</p>
-                        <button class="btn btn-primary btn-sm">Browse Market →</button>
-                    </div>
-                </div>
-
-                <div class="quick-action-card" data-action="corporate">
-                    <div class="action-image-box">
-                        <img loading="lazy" src="images/Chana.jpg" alt="Corporate Sales">
-                    </div>
-                    <div class="action-content">
-                        <h4>Corporate Contracts</h4>
-                        <p>Explore bulk buying opportunities with corporates</p>
-                        <button class="btn btn-primary btn-sm">View Tenders →</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Crop Comparison Section -->
-        <section class="content-section" id="crop-comparison-section">
-            <div class="section-header">
-                <h2 data-i18n="comparison_title">Crop Comparison & Analysis</h2>
-                <p data-i18n="comparison_subtitle">Compare potential profits and resources for your region</p>
-            </div>
-
             <div class="card" style="margin-bottom: 24px;">
-                <h3 style="color: #2d5016; margin-bottom: 16px;">Select Your Location</h3>
+                <h3 style="color: #2d5016; margin-bottom: 12px;">📊 Or Compare Crops Manually</h3>
+                <p style="color: #757575; font-size: 0.88rem; margin-bottom: 16px;">Choose your own location and select specific crops to compare side-by-side</p>
                 <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
                     <div class="form-group">
                         <label for="comparisonStateSelect">State</label>
@@ -370,6 +309,152 @@
 
             <div id="comparisonResults" class="comparison-results hidden">
                 <!-- Comparison charts and data will be populated here -->
+            </div>
+        </section>
+
+        <!-- ============================================
+             CROP DISEASE DETECTION SECTION
+             ============================================ -->
+        <section class="content-section" id="disease-detection-section">
+            <div class="section-header">
+                <h2 data-i18n="disease_detection_title">Crop Disease Detection</h2>
+                <p data-i18n="disease_detection_subtitle">Upload a photo of your crop leaf to identify diseases and get treatment recommendations</p>
+            </div>
+
+            <div class="disease-detection-container">
+                <!-- Upload Area -->
+                <div class="card disease-upload-card">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Upload Crop Image</h3>
+                    <p style="color:#757575;margin-bottom:16px;">Take a clear photo of the affected leaf or plant part for accurate detection</p>
+                    
+                    <div class="disease-upload-zone" id="diseaseUploadZone">
+                        <div class="upload-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8bc34a" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        <p class="upload-text">Drag & drop your crop image here</p>
+                        <p class="upload-subtext">or click to browse files</p>
+                        <p class="upload-formats">Supports: JPG, PNG, WEBP (Max 10MB)</p>
+                        <input type="file" id="diseaseImageInput" accept="image/*" hidden>
+                    </div>
+
+                    <!-- Image Preview -->
+                    <div class="disease-image-preview hidden" id="diseaseImagePreview">
+                        <img id="diseasePreviewImg" alt="Uploaded crop image">
+                        <button class="btn btn-outline-danger btn-sm" id="diseaseRemoveImage">✕ Remove</button>
+                    </div>
+
+                    <div class="disease-action-buttons">
+                        <button class="btn btn-primary" id="diseaseAnalyzeBtn" disabled>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px;">
+                                <circle cx="11" cy="11" r="7"/>
+                                <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+                            </svg>
+                            Analyze for Diseases
+                        </button>
+                        <button class="btn btn-outline-primary" id="diseaseCameraBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px;">
+                                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                            Use Camera
+                        </button>
+                    </div>
+
+                    <!-- Select Crop Type -->
+                    <div class="disease-crop-select">
+                        <label for="diseaseCropType">Select Crop (optional, for better accuracy)</label>
+                        <select class="form-control" id="diseaseCropType">
+                            <option value="">Auto-detect crop</option>
+                            <option value="rice">Rice (धान)</option>
+                            <option value="wheat">Wheat (गेहूं)</option>
+                            <option value="cotton">Cotton (कपास)</option>
+                            <option value="tomato">Tomato (टमाटर)</option>
+                            <option value="potato">Potato (आलू)</option>
+                            <option value="onion">Onion (प्याज)</option>
+                            <option value="sugarcane">Sugarcane (गन्ना)</option>
+                            <option value="maize">Maize (मक्का)</option>
+                            <option value="groundnut">Groundnut (मूंगफली)</option>
+                            <option value="mustard">Mustard (सरसों)</option>
+                            <option value="mango">Mango (आम)</option>
+                            <option value="turmeric">Turmeric (हल्दी)</option>
+                            <option value="chana">Chana / Chickpea (चना)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Analysis Results -->
+                <div class="card disease-results-card hidden" id="diseaseResultsCard">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Detection Results</h3>
+                    
+                    <!-- Loading State -->
+                    <div class="disease-analyzing" id="diseaseAnalyzing">
+                        <div class="analyzing-spinner"></div>
+                        <p>Analyzing your crop image...</p>
+                        <p class="analyzing-subtext">Using AI to detect diseases and abnormalities</p>
+                    </div>
+
+                    <!-- Result Content -->
+                    <div class="disease-result-content hidden" id="diseaseResultContent">
+                        <!-- Health Status Badge -->
+                        <div class="disease-status-badge" id="diseaseStatusBadge">
+                            <span class="status-icon"></span>
+                            <span class="status-text"></span>
+                        </div>
+
+                        <!-- Disease Info -->
+                        <div class="disease-info-grid" id="diseaseInfoGrid">
+                            <!-- Populated by JS -->
+                        </div>
+
+                        <!-- Treatment Section -->
+                        <div class="disease-treatment" id="diseaseTreatment">
+                            <h4>🌿 Recommended Treatment</h4>
+                            <div class="treatment-steps" id="diseaseTreatmentSteps">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Prevention Tips -->
+                        <div class="disease-prevention" id="diseasePrevention">
+                            <h4>🛡️ Prevention Tips</h4>
+                            <ul id="diseasePreventionList">
+                                <!-- Populated by JS -->
+                            </ul>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="disease-result-actions">
+                            <button class="btn btn-primary" id="diseaseNewScan">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px;">
+                                    <polyline points="23 4 23 10 17 10"/>
+                                    <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+                                </svg>
+                                Scan Another Crop
+                            </button>
+                            <button class="btn btn-outline-primary" id="diseaseDownloadReport">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px;">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                Download Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Common Diseases Reference -->
+                <div class="card disease-reference-card">
+                    <h3>📋 Common Crop Diseases in India</h3>
+                    <p style="color:#757575;margin-bottom:16px;">Quick reference guide for identifying common crop diseases</p>
+                    <div class="disease-reference-grid" id="diseaseReferenceGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -413,7 +498,7 @@
             <!-- Farmer Listings Grid -->
             <div class="produce-listings-grid">
                 <!-- Listing Card 1 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="cereals" data-season="rabi">
                     <div class="produce-badge premium">Premium Quality</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -463,7 +548,7 @@
                 </div>
 
                 <!-- Listing Card 2 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="cereals" data-season="kharif">
                     <div class="produce-badge organic">Organic Certified</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -513,7 +598,7 @@
                 </div>
 
                 <!-- Listing Card 3 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="pulses" data-season="rabi">
                     <div class="produce-header">
                         <div class="crop-image-box">
                             <img loading="lazy" src="images/masoor.jpg" alt="Masoor Dal">
@@ -562,7 +647,7 @@
                 </div>
 
                 <!-- Listing Card 4 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="vegetables" data-season="kharif">
                     <div class="produce-badge fresh">Fresh Harvest</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -612,7 +697,7 @@
                 </div>
 
                 <!-- Listing Card 5 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="oilseeds" data-season="kharif">
                     <div class="produce-header">
                         <div class="crop-image-box">
                             <img loading="lazy" src="images/Groundnut.jpg" alt="Groundnut">
@@ -661,7 +746,7 @@
                 </div>
 
                 <!-- Listing Card 6 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="spices" data-season="rabi">
                     <div class="produce-badge premium">A1 Quality</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -711,7 +796,7 @@
                 </div>
 
                 <!-- Listing Card 7 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="cereals" data-season="kharif">
                     <div class="produce-badge organic">Organic</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -761,7 +846,7 @@
                 </div>
 
                 <!-- Listing Card 8 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="cereals" data-season="kharif">
                     <div class="produce-header">
                         <div class="crop-image-box">
                             <img loading="lazy" src="images/Cotton.jpg" alt="Cotton">
@@ -810,7 +895,7 @@
                 </div>
 
                 <!-- Listing Card 9 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="vegetables" data-season="rabi">
                     <div class="produce-badge fresh">Just Harvested</div>
                     <div class="produce-header">
                         <div class="crop-image-box">
@@ -860,7 +945,7 @@
                 </div>
 
                 <!-- Listing Card 10 -->
-                <div class="produce-card">
+                <div class="produce-card" data-category="oilseeds" data-season="rabi">
                     <div class="produce-header">
                         <div class="crop-image-box">
                             <img loading="lazy" src="images/mustard.jpg" alt="Mustard">
@@ -906,193 +991,6 @@
                         </div>
                     </div>
                     <button class="btn btn-outline-primary btn-block">Contact Cultivator</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================
-             BUY PRODUCE SECTION (Retailer Portal)
-             ============================================ -->
-        <section class="content-section" id="buy-produce-section">
-            <div class="section-header">
-                <h2 data-i18n="buy_produce_title">Retailer Procurement Hub</h2>
-                <p data-i18n="buy_produce_subtitle">Source directly from Kisans • Zero middlemen • Farm-gate prices • Quality assured produce</p>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="marketplace-search-bar">
-                <div class="search-input-wrapper">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" placeholder="Search by crop name, variety, location, or farmer..." class="form-control search-input">
-                </div>
-                <button class="btn btn-primary">Find Produce</button>
-            </div>
-
-            <!-- Category Chips -->
-            <div class="category-chips">
-                <button class="chip active">All Categories</button>
-                <button class="chip">Cereals</button>
-                <button class="chip">Pulses</button>
-                <button class="chip">Vegetables</button>
-                <button class="chip">Fruits</button>
-                <button class="chip">Spices</button>
-                <button class="chip">Oilseeds</button>
-            </div>
-
-            <!-- Produce Table -->
-            <div class="card">
-                <div class="table-responsive">
-                    <table class="table marketplace-table">
-                        <thead>
-                            <tr>
-                                <th>Commodity</th>
-                                <th>Variety & Grade</th>
-                                <th>Quantity (Qtl)</th>
-                                <th>Farm-Gate Price</th>
-                                <th>Location</th>
-                                <th>Grower Rating</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="commodity-tag cereals"><img loading="lazy" src="images/Wheat.jpg" alt="Wheat"> Wheat</span></td>
-                                <td>HD-3226, Grade-A</td>
-                                <td>85</td>
-                                <td class="price-cell">₹2,450/Qtl</td>
-                                <td>Karnal, HR</td>
-                                <td><span class="rating-badge">★ 4.8</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag cereals"><img loading="lazy" src="images/rice.jpg" alt="Rice"> Basmati Paddy</span></td>
-                                <td>Pusa-1121, Export</td>
-                                <td>120</td>
-                                <td class="price-cell">₹4,850/Qtl</td>
-                                <td>Dehradun, UK</td>
-                                <td><span class="rating-badge">★ 4.9</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag pulses"><img loading="lazy" src="images/masoor.jpg" alt="Lentils"> Masoor Dal</span></td>
-                                <td>Whole Red, FAQ</td>
-                                <td>45</td>
-                                <td class="price-cell">₹6,200/Qtl</td>
-                                <td>Indore, MP</td>
-                                <td><span class="rating-badge">★ 4.6</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag vegetables"><img loading="lazy" src="images/Tomato.jpg" alt="Tomatoes"> Tomatoes</span></td>
-                                <td>Hybrid-7711, Large</td>
-                                <td>25/Week</td>
-                                <td class="price-cell">₹2,800/Qtl</td>
-                                <td>Nashik, MH</td>
-                                <td><span class="rating-badge">★ 4.7</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag oilseeds"><img loading="lazy" src="images/Groundnut.jpg" alt="Groundnut"> Groundnut</span></td>
-                                <td>TG-37A, Bold HPS</td>
-                                <td>60</td>
-                                <td class="price-cell">₹5,950/Qtl</td>
-                                <td>Junagadh, GJ</td>
-                                <td><span class="rating-badge">★ 4.5</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag spices"><img loading="lazy" src="images/Turmeric.jpg" alt="Turmeric"> Turmeric</span></td>
-                                <td>Erode Finger, 5.2%</td>
-                                <td>35</td>
-                                <td class="price-cell">₹12,500/Qtl</td>
-                                <td>Erode, TN</td>
-                                <td><span class="rating-badge">★ 4.9</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag pulses"><img loading="lazy" src="images/Chana.jpg" alt="Chana"> Chana Dal</span></td>
-                                <td>Desi, Super Bold</td>
-                                <td>75</td>
-                                <td class="price-cell">₹5,650/Qtl</td>
-                                <td>Rajkot, GJ</td>
-                                <td><span class="rating-badge">★ 4.4</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag vegetables"><img loading="lazy" src="images/Onion.jpg" alt="Onion"> Onion</span></td>
-                                <td>Nashik Red, Large</td>
-                                <td>150</td>
-                                <td class="price-cell">₹1,850/Qtl</td>
-                                <td>Nashik, MH</td>
-                                <td><span class="rating-badge">★ 4.6</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag fruits"><img loading="lazy" src="images/Mango.jpg" alt="Mango"> Alphonso Mango</span></td>
-                                <td>Ratnagiri, Premium</td>
-                                <td>40</td>
-                                <td class="price-cell">₹8,500/Qtl</td>
-                                <td>Ratnagiri, MH</td>
-                                <td><span class="rating-badge">★ 4.8</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                            <tr>
-                                <td><span class="commodity-tag cereals"><img loading="lazy" src="images/maize-seeds.jpg" alt="Maize"> Maize</span></td>
-                                <td>Yellow Dent, Feed</td>
-                                <td>200</td>
-                                <td class="price-cell">₹2,150/Qtl</td>
-                                <td>Davangere, KA</td>
-                                <td><span class="rating-badge">★ 4.3</span></td>
-                                <td><button class="btn btn-sm btn-primary">Place Order</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Benefits Grid -->
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h4>Quality Assurance</h4>
-                    <p>All produce verified for grade, moisture & purity before listing</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h4>Real-Time Availability</h4>
-                    <p>Live inventory updates from farm-level storage facilities</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                            <line x1="1" y1="10" x2="23" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h4>Secure Payments</h4>
-                    <p>Escrow-protected transactions with instant settlement to farmers</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h4>Full Traceability</h4>
-                    <p>Complete farm-to-fork chain visibility with geo-tagged produce</p>
                 </div>
             </div>
         </section>
@@ -1406,14 +1304,14 @@
         showLoadingState(true, 'Analyzing best crops for ' + districtName + ', ' + stateName + '...');
         
         try {
-            // Navigate to Crop Comparison section
+            // Navigate to Crop Recommendation section (scroll down to results)
             document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            const section = document.getElementById('crop-comparison-section');
+            const section = document.getElementById('crop-recommendation-section');
             if (section) {
                 section.classList.add('active');
             }
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-            const navItem = document.querySelector('[data-page="crop-comparison"]');
+            const navItem = document.querySelector('[data-page="crop-recommendation"]');
             if (navItem) navItem.classList.add('active');
             
             // Set the state, district and season in comparison dropdowns
@@ -1511,6 +1409,7 @@
         setTimeout(() => toast.remove(), 3500);
     }
     </script>
+    <script defer src="js/disease_detection.js"></script>
     <script defer src="js/marketplace.js"></script>
     
     </div><!-- End #app wrapper -->
